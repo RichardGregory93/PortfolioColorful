@@ -14,25 +14,31 @@
 
 @font-face {
   font-family: "Merriweather";
-  src: url("fonts/merriweather/merriweather-latin-400-normal.ttf")
+  src: url("/fonts/merriweather/merriweather-latin-400-normal.ttf")
     format("truetype");
 }
 
 @font-face {
   font-family: "MerriweatherBold";
-  src: url("fonts/merriweather/merriweather-latin-700-normal.ttf")
+  src: url("/fonts/merriweather/merriweather-latin-700-normal.ttf")
     format("truetype");
 }
 
 @font-face {
   font-family: "MerriweatherSansRegular";
-  src: url("fonts/merriweather_Sans/merriweather-sans-latin-400-normal.ttf")
+  src: url("/fonts/merriweather_Sans/merriweather-sans-latin-400-normal.ttf")
     format("truetype");
 }
 
 @font-face {
   font-family: "MerriweatherSansLight";
-  src: url("fonts/merriweather_Sans/merriweather-sans-latin-300-normal.ttf")
+  src: url("/fonts/merriweather_Sans/merriweather-sans-latin-300-normal.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "MerriweatherSansBold";
+  src: url("/fonts/merriweather_Sans/merriweather-sans-latin-700-normal.ttf")
     format("truetype");
 }
 
@@ -152,14 +158,16 @@ div {
 }
 
 .largeCardHolder {
+  width: 100%;
   display: flex;
+
   flex-wrap: wrap;
   /* background-color: rgba (255, 0, 0, 0.25); */
   flex-direction: row;
   gap: 50px;
-  align-items: center;
   justify-items: center;
   justify-content: center;
+  align-items: start;
   margin-top: 150px;
 }
 
@@ -167,7 +175,7 @@ div {
   display: flex;
   flex-direction: column;
   width: clamp(300px, 90vw, 600px);
-  height: clamp(400px, 60%, 600px);
+  /* height: clamp(400px, 60%, 600px); */
   position: relative;
   font-size: 20px;
   grid-template-columns: 1fr 3fr;
@@ -178,25 +186,11 @@ div {
   /* backdrop-filter: blur(10px); */
 }
 
-.largeCardIcon {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  color: var(--complementaryColor);
-  right: 20px;
-  top: 20px;
-  /* background-color: red; */
-  display: grid;
-  place-items: center;
-  font-size: 70px;
-  z-index: 100;
-}
-
 .largeCardGraphic {
   display: grid;
   width: 100%;
   /* height: clamp(300px, 30vh\\\ 400px); */
-  height: 200px;
+  height: 300px;
 
   /* max-width: 40vw; */
   /* grid-column: 1; */
@@ -210,9 +204,24 @@ div {
   width: 100%;
   height: 100%;
   background-image: url("/img/GreatTeeth_Adjusted.jpg");
-  background-position: center center;
+  background-position: center -50px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.largeCardIcon {
+  /* position: absolute;
+  width: 80px;
+  height: 80px; */
+  /* background-color: #c0c2c5; */
+  width: 100%;
+  height: 100px;
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  color: var(--complementaryColor);
+  font-size: 40px;
+  z-index: 100;
 }
 
 .largeCardMessage {
@@ -222,7 +231,7 @@ div {
   place-items: center;
   align-items: center;
   justify-items: start;
-  padding: 30px;
+  padding: 0 0 30px 0;
   font-size: 30px;
   line-height: 150%;
   backdrop-filter: blur(5px);
@@ -244,6 +253,14 @@ div {
   margin-bottom: 10px;
   line-height: 30px;
   font-family: "MerriweatherSansLight";
+}
+
+.largeCardMessageBodyTitle {
+  font-size: 40px;
+  line-height: 30px;
+  font-family: "MerriweatherSansBold";
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
 .fontawesome {

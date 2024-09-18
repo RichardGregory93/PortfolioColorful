@@ -1,0 +1,5 @@
+@media screen and (max-width: 600px) {
+  .largeCardImage {
+    background-position: center center;
+  }
+}

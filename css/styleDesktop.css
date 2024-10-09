@@ -174,11 +174,8 @@ div {
   flex-direction: row;
   gap: 50px;
   width: clamp(300px, 90vw, 1200px);
-  /* height: clamp(400px, 60%, 600px); */
   position: relative;
   font-size: 20px;
-  border-radius: 20px;
-  overflow: hidden;
   opacity: 0.9;
   background-color: white;
 }
@@ -186,19 +183,15 @@ div {
 .largeCardGraphic {
   display: grid;
   width: 400px;
-  /* height: clamp(300px, 30vh\\\ 400px); */
   height: 500px;
-
-  /* max-width: 40vw; */
-  /* grid-column: 1; */
   font-size: 20px;
-  /* grid-template-rows: 1fr; */
   background-color: white;
   place-items: center;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .largeCardImage {
-  grid-row: 1;
   width: 100%;
   height: 100%;
   background-image: url("/img/GreatTeeth_Adjusted.jpg");
@@ -208,10 +201,6 @@ div {
 }
 
 .largeCardIcon {
-  /* position: absolute;
-  width: 80px;
-  height: 80px; */
-  /* background-color: #c0c2c5; */
   width: 100%;
   height: 100px;
   display: grid;
@@ -292,14 +281,29 @@ div {
   max-width: 1600px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 100px 1fr;
   justify-items: center;
-  background-color: var(--primaryColor);
+  /* background-color: var(--primaryColor);
   background-image: url(img/background_pink.png);
   background-size: cover;
-  background-position: center center;
+  background-position: center center; */
   margin-left: auto;
   margin-right: auto;
+}
+
+.projectsTitle {
+  display: flex;
+  place-items: center;
+  background-color: transparent;
+  /* background-color: #f0f0f0; */
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  font-family: MerriweatherBold;
+  justify-content: center;
+  border-width: 2px 0 0 0;
+  border-style: solid;
+  margin-top: 50px;
 }
 
 .projectCardsHolder {
@@ -328,6 +332,69 @@ div {
   background-color: white;
 }
 
+.projectCardGraphic {
+  display: grid;
+  width: 400px;
+  height: 500px;
+  font-size: 20px;
+  background-color: white;
+  place-items: center;
+}
+
+.projectCardImage {
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/GreatTeeth_Adjusted.jpg");
+  background-position: center -50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.projectCardMessage {
+  /* grid-column: 2; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  place-items: center;
+  align-items: center;
+  justify-items: start;
+  padding: 0 0 30px 0;
+  font-size: 30px;
+  line-height: 150%;
+  backdrop-filter: blur(5px);
+  font-family: var(--titleFont);
+}
+
+.projectCardMessageBody {
+  width: 100%;
+  height: 100%;
+  line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: start;
+}
+
+.projectCardMessageBodyParagraph {
+  font-size: 24px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  font-family: "MerriweatherSansLight";
+}
+
+.projectCardMessageBodyParagraphBold {
+  font-family: "MerriweatherBold";
+}
+
+.projectCardMessageBodyTitle {
+  margin-top: 10px;
+  font-size: 40px;
+  line-height: 30px;
+  font-family: "MerriweatherSansBold";
+  font-weight: 500;
+  margin-bottom: 40px;
+}
 .projectCardBodyButton {
   font-family: var(--titleFont);
   /* width: 100px; */
